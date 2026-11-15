@@ -4,11 +4,13 @@
 
 ## Встановлення
 
-Запустіть команду в корені свого проєкту та виберіть Claude Code або Codex в інсталяторі.
+Запустіть команду в корені свого проєкту.
 
 ```sh
 npx skills add aigarageone/grill-me-ai-garage --skill grill-me --skill grilling
 ```
+
+Щоб явно вказати агента, додайте `--agent claude-code` або `--agent codex`.
 
 - **Claude Code** — введіть `/grill-me` і додайте план, який хочете перевірити. Ця команда викликає скіл `grilling`.
 - **Codex** — введіть `$grilling` і додайте план, який хочете перевірити.
