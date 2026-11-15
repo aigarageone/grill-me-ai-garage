@@ -1,20 +1,24 @@
 # Grill Me AI Garage
 
-Скіл допомагає перевірити план, рішення чи ідею перед реалізацією. Агент ставить запитання раундами, пропонує відповідь на кожне й переходить до наступного раунду після ваших рішень.
+Grill Me допомагає перевірити план перед реалізацією або скласти робочий портрет людини. Агент ставить запитання раундами й пропонує відповідь або варіанти до кожного.
 
 ## Встановлення
 
 Запустіть команду в корені свого проєкту.
 
 ```sh
-npx skills add aigarageone/grill-me-ai-garage --skill grill-me --skill grilling
+npx skills add aigarageone/grill-me-ai-garage --skill grill-me --skill grilling --skill grill-me-portrait
 ```
 
 Щоб явно вказати агента, додайте `--agent claude-code` або `--agent codex`.
 
-- **Claude Code** — введіть `/grill-me` і додайте план, який хочете перевірити. Ця команда викликає скіл `grilling`.
-- **Codex** — введіть `$grilling` і додайте план, який хочете перевірити.
+## Запуск
+
+- **Перевірка плану.** Додайте план, рішення чи ідею до `/grill-me` у Claude Code або `$grilling` у Codex.
+- **Портрет.** Введіть `/grill-me-portrait` у Claude Code або `$grill-me-portrait` у Codex. За три раунди агент збере відомості про роботу, джерела доходу, цілі й блокери та запише їх у `portrait.md`. Скажіть «глибше», щоб додати раунд за обраною темою.
+
+`/grill-me` також запускає портрет, якщо запит стосується самої людини.
 
 ## Авторство
 
-AI Garage опублікував пакет з оригінальними скілами Matt Pocock і метаданими для Codex. [Вихідні файли](https://github.com/mattpocock/skills/tree/7739eaed7f8f3915437a8def198a6d0d7206dbc7/skills/productivity) · [Ліцензія MIT](LICENSE)
+Режим перевірки плану базується на скілах `grill-me` і `grilling` Matt Pocock. [Вихідні файли](https://github.com/mattpocock/skills/tree/7739eaed7f8f3915437a8def198a6d0d7206dbc7/skills/productivity) · [Ліцензія MIT](LICENSE)
